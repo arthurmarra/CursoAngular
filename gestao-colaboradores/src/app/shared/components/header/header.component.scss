@@ -1,0 +1,15 @@
+nav {
+    background-color: black;
+    min-height: 20px;
+    padding: 10px;
+}
+
+nav > a {
+    padding: 10px;
+    color: white; 
+}
+
+nav > a:hover{
+    color: lightgray;
+    text-decoration: none;
+}
