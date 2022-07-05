@@ -1,0 +1,16 @@
+<h1>{{ titulo }}</h1>
+
+
+<div *ngIf="exibeProduto">
+
+    <div *ngFor="let livro of livros">
+        <p>Título: {{livro.titulo}}</p>
+        <p>Autor: {{livro.autor}}</p>
+        <p>Quantidade {{livro.quantidade}}</p>
+        <img src="{{livro.imagem}}" width="250px" height="250px">
+        <p [ngClass]="{'em-estoque': livro.disponivel, 'falta-estoque': !livro.disponivel}">{{ livro.disponivel ? 'Em Estoque' : 'Produto indisponível'}}</p>
+        <hr>
+    </div>
+
+</div>
+<button (click)="exibirProdutoSimNao()">Exibe Produto</button>
