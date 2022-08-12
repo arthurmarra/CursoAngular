@@ -1,0 +1,16 @@
+<div class="box">
+    <div *ngFor="let produto of produtos" class="lista-produtos">
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ produto.descricao }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{ produto.imagem }}" alt="Imagem Produto" width="300px" height="300px">
+            <p>ID do Produto: {{ produto.id }}</p>
+            <p>Preço: {{ produto.preco | currency: 'R$' }}</p>
+            <p>Quantidade: {{ produto.quantidade }}</p>
+            <mat-card-actions>
+                <button class="details" (click)="detailsProduct(produto.id)">Detalhes</button>
+            </mat-card-actions>
+          </mat-card>
+    </div>
+</div>

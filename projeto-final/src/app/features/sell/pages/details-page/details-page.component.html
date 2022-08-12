@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div *ngIf="product">
+    <p>ID do Produto: {{ product.id }} </p>
+    <p>Descrição do produto: {{ product.descricao }}</p>
+    <p>Preço: {{ product.preco | currency: 'R$' }}</p>
+    <p>Quantidade: {{ product.quantidade }}</p>
+
+
+    <img src="{{ product.imagem }}" width="300px" height="300px">
+
+</div>
+<app-footer></app-footer>
